@@ -1,0 +1,39 @@
+﻿@model List<LivroViewModel>;
+@{
+    ViewData["Title"] = "Biblioteca de Livros";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-5">@ViewData["Title"]</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var livro in Model)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.em.com.br/EkyS-obeH07wvOy7NGCiF7SqsnA=/675x0/smart/imgsapp.em.com.br/app/noticia_127983242361/2022/09/29/1400246/padre-kelmon-candidato-do-ptb_1_53369.jpg" class="card-img-top" alt="Imagem do Livro">
+                    <div class="card-body">
+                        <h5 class="card-title">@livro.nome</h5>
+                        <p class="card-text">@livro.descricao</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="card-text text-muted">Última atualização: @livro.ultimaatt</p>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary">Ler</button>
+                                <button type="button" class="btn btn-primary">Favoritar</button>
+                                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button type="button" class="dropdown-item">Editar</button></li>
+                                    <li><button type="button" class="dropdown-item">Deletar</button></li>
+                                    <li><button type="button" class="dropdown-item">Adicionar Capítulo</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

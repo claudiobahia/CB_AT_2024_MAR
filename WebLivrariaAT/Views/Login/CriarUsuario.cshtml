@@ -1,0 +1,38 @@
+﻿@model UsuarioViewModel
+@{
+    ViewData["Title"] = "Criar Usuário";
+    Layout = "_LoginLayout";
+}
+
+<div class="container">
+    <h1>Criar Usuário</h1>
+    <form asp-controller="Login" asp-action="CriarUsuario" method="post">
+        <div class="form-group">
+            <label for="nomeUsuario">Nome</label>
+            <input type="text" asp-for="nome" class="form-control" id="nomeUsuario" placeholder="Digite o nome do usuário" required>
+        </div>
+        <div class="form-group">
+            <label for="emailUsuario">Email</label>
+            <input type="email" asp-for="email" class="form-control" id="emailUsuario" placeholder="Digite o email do usuário" required>
+        </div>
+        <div class="form-group">
+            <label for="senhaUsuario">Senha</label>
+            <input type="password" asp-for="password" class="form-control" id="senhaUsuario" placeholder="Digite a senha do usuário" required>
+        </div>
+        <div class="form-group">
+            <label for="permissaoUsuario">Permissão</label>
+            <select class="form-control" asp-for="permissao" id="permissaoUsuario">
+                <option value="0">Editor</option>
+                <option value="1">Usuário</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="statusUsuario">Status</label>
+            <select class="form-control" asp-for="status" id="statusUsuario">
+                <option value="0">Devedor</option>
+                <option value="1">Pagante</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+    </form>
+</div>

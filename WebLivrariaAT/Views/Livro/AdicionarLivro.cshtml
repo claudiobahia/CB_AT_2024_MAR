@@ -1,0 +1,50 @@
+﻿@model LivroViewModel
+@{
+    ViewData["Title"] = "Adicione um Livro";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livro</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastro de Livro</h1>
+        <form asp-controller="Livro" asp-action="AdicionarLivro" method="post">
+            <div class="form-group">
+                <label for="tituloLivro">Título do Livro</label>
+                <input type="text" asp-for="nome" class="form-control" id="tituloLivro" placeholder="Digite o título do livro">
+            </div>
+            <div class="form-group">
+                <label for="descricaoLivro">Sinopse</label>
+                <textarea class="form-control" asp-for="descricao" id="descricaoLivro" rows="3" placeholder="Digite a sinopse do livro"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="autorLivro">Autor</label>
+                <input type="text" asp-for="autor" class="form-control" id="autorLivro" placeholder="Digite o nome do autor">
+            </div>
+            <div class="form-group">
+                <label for="imagemLivro">Link da imagem</label>
+                <textarea class="form-control" asp-for="imagem" id="imagemLivro" rows="3" placeholder="Insira o link da foto"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="ultimaAtt">Última Atualização</label>
+                <input type="text" asp-for="ultimaatt" class="form-control" value="@DateTime.Now.ToString()" id="ultimaAtt" placeholder="Data e hora da última atualização @DateTime.Now.ToString()" disabled>
+            </div>
+            @*
+            <div class="form-group">
+                <label for="tituloCapitulo1">Título do Primeiro Capítulo</label>
+                <input type="text" asp-for="capitulos[0].titulo" class="form-control" id="tituloCapitulo1" placeholder="Digite o título do primeiro capítulo">
+            </div>
+            <div class="form-group">
+                <label for="descricaoCapitulo1">Descrição do Primeiro Capítulo</label>
+                <textarea class="form-control" asp-for="capitulos[0].descricao" id="descricaoCapitulo1" rows="3" placeholder="Digite a descrição do primeiro capítulo"></textarea>
+            </div>
+            *@
+            <button  type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+            
+        </form>
+    </div>
+
+</body>

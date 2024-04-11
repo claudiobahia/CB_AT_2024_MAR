@@ -1,0 +1,33 @@
+﻿@model CapLivroViewModel
+@{
+    ViewData["Title"] = "Ler Capítulo";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">@Model.livro.nome</h2>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">@Model.livro.descricao</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">
+            <h3>Capítulos:</h3>
+            <ul class="list-group">
+                @foreach (var capitulo in Model.capitulos)
+                {
+                    <li class="list-group-item mb-4">
+                        <h4>@capitulo.titulo <span class="badge bg-primary"></span></h4>
+                        <p>@capitulo.descricao</p>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

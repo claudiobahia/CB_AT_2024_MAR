@@ -1,0 +1,70 @@
+﻿@model LivroViewModel
+
+@{
+    ViewData["Title"] = "Apagar Livro";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">@ViewData["Title"]</h1>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <div class="card p-4">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="card-title">Confirmação de Exclusão</h5>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Você tem certeza que deseja excluir o livro abaixo?</h5>
+                    <div class="card">
+                        <div class="card-body">
+                            <dl class="row">
+                                <dt class="col-sm-3">Nome:</dt>
+                                <dd class="col-sm-9">@Model.nome</dd>
+                                <dt class="col-sm-3">Descrição:</dt>
+                                <dd class="col-sm-9">@Model.descricao</dd>
+                                <dt class="col-sm-3">Autor:</dt>
+                                <dd class="col-sm-9">@Model.autor</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <form id="deleteForm" asp-controller="Livro" asp-action="ConfirmarExclusao" asp-route-id="@Model.id">
+                        <button id="deleteButton" type="button" class="btn btn-danger">Confirmar Exclusão</button>
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Cancelar</a>
+                    </form>
+
+                    <script>
+                        document.getElementById("deleteButton").addEventListener("click", function () {
+                            if (confirm("Tem certeza de que deseja excluir este livro?")) {
+                                var form = document.getElementById("deleteForm");
+                                var formData = new FormData(form);
+
+                                fetch(form.action, {
+                                    method: "DELETE",
+                                    body: formData
+                                })
+                                    .then(response => {
+                                        if (!response.ok) {
+                                            throw new Error("Erro ao excluir o livro");
+                                        }
+                                        return response.json();
+                                    })
+                                    .then(data => {
+                                        if (data.redirectUrl) {
+                                            window.location.href = data.redirectUrl;
+                                        } else {
+                                            console.error("Erro ao obter a URL de redirecionamento");
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error(error);
+                                    });
+                            }
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

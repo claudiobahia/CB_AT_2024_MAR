@@ -1,0 +1,35 @@
+﻿@model CapituloViewModel
+@{
+    ViewData["Title"] = "Adicione um Capitulo";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Capitulo</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastro de Capitulo</h1>
+        <form asp-controller="Capitulo" asp-action="AdicionarCapitulo" method="post">
+            <!-- Campos para os dados do livro -->
+            <div class="form-group">
+                <label for="tituloCapitulo">Título do Capitulo</label>
+                <input type="text" asp-for="titulo" class="form-control" id="tituloCapitulo" placeholder="Digite o título do capitulo">
+            </div>
+            <div class="form-group">
+                <label for="descricaoCapitulo">Descrição do Capitulo</label>
+                <textarea class="form-control" asp-for="descricao" id="descricaoCapitulo" rows="3" placeholder="Digite o capitulo do livro"></textarea>
+            </div>
+
+            <div class="form-group" style="display: none;">
+                <label for="descricaoCapitulo">Descrição do Capitulo</label>
+                <input type="hidden" asp-for="livroid" id="livroId" value="@Model.livroid" />
+            </div>
+
+            <button  type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+            
+        </form>
+    </div>
+
+</body>
