@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{506E548A-B7A0-47AD-9139-35D106442466}|WebLivrariaAT\\WebLivrariaAT.csproj|c:\\users\\pichau\\source\\repos\\livrariaat\\weblivrariaat\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{506E548A-B7A0-47AD-9139-35D106442466}|WebLivrariaAT\\WebLivrariaAT.csproj|solutionrelative:weblivrariaat\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 477,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\WebLivrariaAT\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebLivrariaAT\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\WebLivrariaAT\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebLivrariaAT\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-10T23:08:45.55Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
