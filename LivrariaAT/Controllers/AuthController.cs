@@ -1,5 +1,7 @@
-﻿using LivrariaAT.Services;
+﻿using LivrariaAT.Repositorio.Interfaces;
+using LivrariaAT.Services;
 using Microsoft.AspNetCore.Mvc;
+using LivrariaAT.Models;
 
 namespace LivrariaAT.Controllers
 {
@@ -7,13 +9,24 @@ namespace LivrariaAT.Controllers
     [Route("api/auth")]
     public class AuthController : Controller
     {
-        [HttpPost]
-        public IActionResult Auth(string login, string senha)
+        private readonly IUsurarioRepositorio _usurarioRepositorio;
+
+        public AuthController(IUsurarioRepositorio usurarioRepositorio)
         {
-            if (login == "as@a.com" && senha == "123")
+            _usurarioRepositorio = usurarioRepositorio;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Auth(string login, string senha)
+        {
+            List<Usuario> usuarios = await _usurarioRepositorio.BuscarTodosUsuarios();
+            foreach (var usuario in usuarios)
             {
-                var token = TokenService.GenerateToken(new Models.Usuario());
-                return Ok(token);
+                if (login == usuario.email && senha == usuario.password)
+                {
+                    var token = TokenService.GenerateToken(new Models.Usuario());
+                    return Ok(token);
+                }
             }
             return BadRequest("login ou senha invalidos");
         }

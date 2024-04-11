@@ -18,7 +18,7 @@ namespace LivrariaAT.Controllers
             _usurarioRepositorio = usurarioRepositorio;
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<List<Usuario>>> BuscarTodosUsuarios()
         {
@@ -26,7 +26,7 @@ namespace LivrariaAT.Controllers
             return Ok(_usuarios);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<Usuario>> BuscarUsuarioPorId(int id)
         {
@@ -34,7 +34,7 @@ namespace LivrariaAT.Controllers
             return Ok(_usuario);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Usuario>> CriarUsuario([FromBody] Usuario usuario)
         {
@@ -42,7 +42,7 @@ namespace LivrariaAT.Controllers
             return Ok(_usuario);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<ActionResult<Usuario>> AtualizarUsuario([FromBody] Usuario usuario, int id)
         {
@@ -50,7 +50,7 @@ namespace LivrariaAT.Controllers
             return Ok(_usuario);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> ApagarUsuario(int id)
         {

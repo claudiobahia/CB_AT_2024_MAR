@@ -19,14 +19,14 @@ namespace LivrariaAT.Controllers
             _capituloRepositorio = capituloRepositorio;
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<List<Capitulo>>> BuscarTodosCapitulos()
         {
             List<Capitulo> _capitulos = await _capituloRepositorio.BuscarTodosCapitulos();
             return Ok(_capitulos);
         }
-        //[Authorize]
+        [Authorize]
         [HttpGet("{livroid}")]
         public async Task<ActionResult<List<Capitulo>>> BuscarTodosCapitulosDeLivro(int livroid)
         {
@@ -42,7 +42,7 @@ namespace LivrariaAT.Controllers
         //    return Ok(_capitulo);
         //}
 
-        //[Authorize]
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Capitulo>> CriarCapitulo([FromBody] Capitulo capitulo)
         {
@@ -50,7 +50,7 @@ namespace LivrariaAT.Controllers
             return Ok(_capitulo);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<ActionResult<Capitulo>> AtualizarCapitulo([FromBody] Capitulo capitulo, int id)
         {
@@ -58,7 +58,7 @@ namespace LivrariaAT.Controllers
             return Ok(_capitulo);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> ApagarCapitulo(int id)
         {

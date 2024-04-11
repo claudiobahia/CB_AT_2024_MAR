@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebLivrariaAT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c90f2a2c187144f3fcabd7c05ef28de7a3c89a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebLivrariaAT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebLivrariaAT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

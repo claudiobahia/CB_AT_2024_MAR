@@ -19,7 +19,7 @@ namespace LivrariaAT.Controllers
             _livroRepositorio = livroRepositorio;
         }
 
-       // [Authorize]
+       [Authorize]
         [HttpGet]
         public async Task<ActionResult<List<Livro>>> BuscarTodosLivros()
         {
@@ -27,7 +27,7 @@ namespace LivrariaAT.Controllers
             return Ok(_livros);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<Livro>> BuscarLivroPorId(int id)
         {
@@ -35,7 +35,7 @@ namespace LivrariaAT.Controllers
             return Ok(_livro);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Livro>> CriarLivro([FromBody] Livro livro)
         {
@@ -43,7 +43,7 @@ namespace LivrariaAT.Controllers
             return Ok(_livro);
         }
 
-       // [Authorize]
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<ActionResult<Livro>> AtualizarLivro([FromBody] Livro livro, int id)
         {
@@ -51,7 +51,7 @@ namespace LivrariaAT.Controllers
             return Ok(_livro);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> ApagarLivro(int id)
         {
