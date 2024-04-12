@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{844BE890-2273-4FC7-9903-5B9D4705A672}|TestesUnitarios\\TestesUnitarios.csproj|c:\\users\\pichau\\source\\repos\\livrariaat\\testesunitarios\\capitulotestes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{844BE890-2273-4FC7-9903-5B9D4705A672}|TestesUnitarios\\TestesUnitarios.csproj|solutionrelative:testesunitarios\\capitulotestes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12942DF1-1225-42B4-8C28-82D1118D3950}|LivrariaAT\\LivrariaAT.csproj|c:\\users\\pichau\\source\\repos\\livrariaat\\livrariaat\\repositorios\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12942DF1-1225-42B4-8C28-82D1118D3950}|LivrariaAT\\LivrariaAT.csproj|solutionrelative:livrariaat\\repositorios\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12942DF1-1225-42B4-8C28-82D1118D3950}|LivrariaAT\\LivrariaAT.csproj|c:\\users\\pichau\\source\\repos\\livrariaat\\livrariaat\\repositorios\\interfaces\\iusurariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12942DF1-1225-42B4-8C28-82D1118D3950}|LivrariaAT\\LivrariaAT.csproj|solutionrelative:livrariaat\\repositorios\\interfaces\\iusurariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12942DF1-1225-42B4-8C28-82D1118D3950}|LivrariaAT\\LivrariaAT.csproj|c:\\users\\pichau\\source\\repos\\livrariaat\\livrariaat\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12942DF1-1225-42B4-8C28-82D1118D3950}|LivrariaAT\\LivrariaAT.csproj|solutionrelative:livrariaat\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 518,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CapituloTestes.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\TestesUnitarios\\CapituloTestes.cs",
+              "RelativeDocumentMoniker": "TestesUnitarios\\CapituloTestes.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\TestesUnitarios\\CapituloTestes.cs",
+              "RelativeToolTip": "TestesUnitarios\\CapituloTestes.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwD4AAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T02:09:44.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\LivrariaAT\\Repositorios\\UsuarioRepositorio.cs",
+              "RelativeDocumentMoniker": "LivrariaAT\\Repositorios\\UsuarioRepositorio.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\LivrariaAT\\Repositorios\\UsuarioRepositorio.cs",
+              "RelativeToolTip": "LivrariaAT\\Repositorios\\UsuarioRepositorio.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T02:05:05.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUsurarioRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\LivrariaAT\\Repositorios\\Interfaces\\IUsurarioRepositorio.cs",
+              "RelativeDocumentMoniker": "LivrariaAT\\Repositorios\\Interfaces\\IUsurarioRepositorio.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\LivrariaAT\\Repositorios\\Interfaces\\IUsurarioRepositorio.cs",
+              "RelativeToolTip": "LivrariaAT\\Repositorios\\Interfaces\\IUsurarioRepositorio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T02:05:00.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\LivrariaAT\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "LivrariaAT\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\LivrariaAT\\LivrariaAT\\Models\\Usuario.cs",
+              "RelativeToolTip": "LivrariaAT\\Models\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T02:04:46.381Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
