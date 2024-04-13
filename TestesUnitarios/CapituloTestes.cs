@@ -68,5 +68,64 @@ namespace TestesUnitarios
                 Assert.Equal(1, capitulos.First().id);
             }
         }
+
+        [Fact]
+        public async Task BuscarCapituloPorId_DeveRetornarCapitulo()
+        {
+            //Arrange
+            var options = new DbContextOptionsBuilder<LivrosDBContex>()
+                .UseInMemoryDatabase(databaseName: "TestDatabase")
+                .Options;
+
+            var capitulo = new Capitulo { id = 1, titulo = "Capítulo 1", descricao = "Descrição 1", livroid = 1 };
+
+            using (var context = new LivrosDBContex(options))
+            {
+                context.Capitulos.Add(capitulo);
+                context.SaveChanges();
+            }
+
+            using (var context = new LivrosDBContex(options))
+            {
+                var repositorio = new CapituloRepositorio(context);
+
+                //Act
+                var capituloResp = await repositorio.BuscarCapituloPorId(capitulo.id);
+
+                //Assert
+                Assert.NotNull(capituloResp);
+                Assert.Equal(capitulo, capituloResp);
+            }
+        }
+
+        [Fact]
+        public async Task AtualizarCapituloPorId_DeveRetornarCapituloAtualizado()
+        {
+            //Arrange
+            var options = new DbContextOptionsBuilder<LivrosDBContex>()
+                .UseInMemoryDatabase(databaseName: "TestDatabase")
+                .Options;
+
+            var capitulo1 = new Capitulo { id = 1, titulo = "Capítulo 1", descricao = "Descrição 1", livroid = 1 };
+            var capitulo2 = new Capitulo { id = 2, titulo = "Capítulo 2", descricao = "Descrição 2", livroid = 2 };
+
+            using (var context = new LivrosDBContex(options))
+            {
+                context.Capitulos.Add(capitulo1);
+                context.SaveChanges();
+            }
+
+            using (var context = new LivrosDBContex(options))
+            {
+                var repositorio = new CapituloRepositorio(context);
+
+                //Act
+                var capituloResp = await repositorio.AtualizarCapitulo(capitulo2,capitulo1.id);
+
+                //Assert
+                Assert.NotNull(capituloResp);
+                Assert.Equal(capitulo2, capituloResp);
+            }
+        }
     }
 }
